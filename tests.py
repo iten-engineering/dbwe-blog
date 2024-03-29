@@ -4,7 +4,7 @@ os.environ['DATABASE_URL'] = 'sqlite://'
 
 from datetime import datetime, timedelta
 import unittest
-from blog import app, db
+from app import app, db
 from models import User, Post
 
 
