@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/af1f9964-6150-4227-8d4f-e99d843aaea4/resourceGroups/dbwe-rg/providers/Microsoft.Web/sites/dbwe-blog",
-    "appService.deploySubpath": "."
-}
