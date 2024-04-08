@@ -2,7 +2,7 @@
 
 Das Repository enthält die DBWE Blog Version 12 aus dem Projekt [DBWE](https://github.com/iten-engineering/dbwe/tree/main) für die Installation als Azure App Service.
 
-Cloud Deployment 
+## Cloud Deployment 
 
 1. [Installation der Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 
@@ -31,3 +31,18 @@ Cloud Deployment
 11. Browse the app accorrding **Step 4** of the guide and check the Logs in case of an error.
 
 12. At the end, don't forget to stop your App Service again.
+
+
+## Cloud Deployment mit PostgreSQL
+
+Die obige Demo Anwendung verwendet eine SQL Lite DB mit lokaler Datei als Persistenz. 
+
+Für eine produktive Anwendung ist eine dezidierte Datenbank zu verwenden. Dazu wird
+ - anstelle von WebApp wie oben wird auf Azure eine **Web App + Database** deployed. 
+
+- das DB Schema kann nach dem  Deployment der Anwendung via SSH Shell mit dem Command **flask db upgrade** erstellt werden.
+
+- anschliessend steht die Datenbank für die Verwendung der App zur Verfügung.
+ 
+Für eine detaillierte Schritt-für-Schritt Anleitung, siehe [Deploy a Python (Django or Flask) web app with PostgreSQL in Azure](
+https://learn.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app?tabs=flask%2Cwindows&pivots=azure-portal).
